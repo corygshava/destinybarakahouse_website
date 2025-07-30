@@ -16,6 +16,7 @@
     <script src="js/SuperScript.js"></script>
     <script src="js/toappend.js"></script>
     <script src="js/customalerter.js"></script>
+    <script src="js/utilities.js"></script>
 
     <style>
     	.fullpage_slides{
@@ -65,7 +66,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="">
+    <nav class="w3-hide">
 		<div class="navcon">
 			<div class="logo">
 				<a href="#" class="logo">Destiny Baraka House</a>
@@ -93,21 +94,43 @@
 	</nav>
 
 	<!-- landing page content -->
-	<div class="content">
-		<div class="fullpage_slides">
-			<img src="images/landing_slides/slide1.jpg" class="slideimg">
-			<div class="theoverlay">
-				<div class="mycontent">
-					<span class="heading_holder h1">A home for the future</span>
-					<p class="text_holder text-nm">Welcome to destiny baraka house, heres a list of what to expect</p>
-					<div class="button_holder">
-						<button class="btn primary">reach us</button>
-						<button class="btn outline light">take tour</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div class="content" id="timer">
+        <div class="fullpage_slides">
+            <img src="images/landing_slides/slide1.jpg" class="slideimg">
+            <div class="theoverlay">
+                <div class="mycontent">
+                    <h2 class="h1" data-content="institution-name">Destiny baraka house</h2>
+                    <p class="cw-description text-sm">
+                        We are a faith-driven mission organization dedicated to spreading the Gospel, empowering local communities, and supporting humanitarian efforts around the world through love, service, and sustainable outreach.<br>
+                    </p>
+                    <b class="h3">Available in: </b>
+
+                    <div class="smallcard-group" id="timeholder">
+                        <div class="smallcard w3-animate-zoom">
+                            <div class="h2 themetxt" id="days">0</div>
+                            <div class="label">Days</div>
+                        </div>
+                        <div class="smallcard w3-animate-zoom">
+                            <div class="h2 themetxt" id="hours">00</div>
+                            <div class="label">Hours</div>
+                        </div>
+                        <div class="smallcard w3-animate-zoom">
+                            <div class="h2 themetxt" id="minutes">00</div>
+                            <div class="label">Minutes</div>
+                        </div>
+                        <div class="smallcard w3-animate-zoom">
+                            <div class="h2 themetxt" id="seconds">00</div>
+                            <div class="label">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        makecountdown('#timeholder');
+    </script>
 
     <!-- Footer -->
     <footer class="w3-bottom">

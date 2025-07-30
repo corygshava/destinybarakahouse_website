@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny Baraka House - Making a Difference</title>
+
+    <link rel="stylesheet" type="text/css" href="css/coryg_base.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/fa-all.css">
+    <link rel="stylesheet" type="text/css" href="css/landing.css">
+    <link rel="stylesheet" type="text/css" href="css/coryG_UIOps.css">
+
+    <script src="js/coryG_UIOps.js"></script>
+    <script src="js/SuperScript.js"></script>
+    <script src="js/toappend.js"></script>
+    <script src="js/customalerter.js"></script>
+</head>
+<body>
+
+<div class="cw-timer-wrap">
+  <h2 class="cw-heading">Christwork International</h2>
+  <p class="cw-description">
+    Christwork International is a faith-driven mission organization dedicated to spreading the Gospel, empowering local communities, and supporting humanitarian efforts around the world through love, service, and sustainable outreach.
+  </p>
+
+  <div class="cw-countdown">
+    <div class="cw-time-box">
+      <div id="days">0</div>
+      <div class="label">Days</div>
+    </div>
+    <div class="cw-time-box">
+      <div id="hours">00</div>
+      <div class="label">Hours</div>
+    </div>
+    <div class="cw-time-box">
+      <div id="minutes">00</div>
+      <div class="label">Minutes</div>
+    </div>
+    <div class="cw-time-box">
+      <div id="seconds">00</div>
+      <div class="label">Seconds</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cw-timer-wrap {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    color: #f1f5f9;
+    background: #0f172a;
+    border-radius: 1rem;
+    box-shadow: 0 0 30px #0004;
+  }
+
+  .cw-heading {
+    font-size: 2rem;
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
+  }
+
+  .cw-description {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .cw-countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    flex-wrap: wrap;
+  }
+
+  .cw-time-box {
+    background: #1e293b;
+    padding: 1rem 1.2rem;
+    border-radius: 0.75rem;
+    min-width: 80px;
+  }
+
+  .cw-time-box .label {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+</style>
+
+<script>
+  const targetDate = new Date("2025-08-15T18:00:00").getTime();
+
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const gap = targetDate - now;
+
+    if (gap <= 0) {
+      document.querySelector(".cw-countdown").innerHTML = "<h3>Countdown Complete</h3>";
+      return;
+    }
+
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+
+    const days = Math.floor(gap / day);
+    const hours = Math.floor((gap % day) / hour);
+    const minutes = Math.floor((gap % hour) / minute);
+    const seconds = Math.floor((gap % minute) / second);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+  };
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+<!-- 
+	<h1>A home for inland missionaries</h1>
+	<p>coming in: </p>
+	<div class="countdown">
+		<div class="time-box">
+			<div id="days">0</div>
+			<div class="label">Days</div>
+		</div>
+		<div class="time-box">
+			<div id="hours">00</div>
+			<div class="label">Hours</div>
+		</div>
+		<div class="time-box">
+			<div id="minutes">00</div>
+			<div class="label">Minutes</div>
+		</div>
+		<div class="time-box">
+			<div id="seconds">00</div>
+			<div class="label">Seconds</div>
+		</div>
+	</div>
+
+	<script>
+		// 🔧 Set your target date and time here
+		const targetDate = new Date("2025-08-15T18:00:00").getTime();
+
+		const updateCountdown = () => {
+			const now = new Date().getTime();
+			const gap = targetDate - now;
+
+			if (gap <= 0) {
+				document.querySelector(".countdown").innerHTML = "<h2>Countdown Complete</h2>";
+				return;
+			}
+
+			const second = 1000;
+			const minute = second * 60;
+			const hour = minute * 60;
+			const day = hour * 24;
+
+			const days = Math.floor(gap / day);
+			const hours = Math.floor((gap % day) / hour);
+			const minutes = Math.floor((gap % hour) / minute);
+			const seconds = Math.floor((gap % minute) / second);
+
+			document.getElementById("days").textContent = days;
+			document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+			document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+			document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+		};
+
+		updateCountdown(); // initial call
+		setInterval(updateCountdown, 1000); // update every second
+	</script>
+
+</body>
+</html>
+ -->

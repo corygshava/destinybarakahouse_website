@@ -2,3 +2,19 @@ nav .navlinks{
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
+
+/* countdown */
+.smallcard-group{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: var(--size-md);
+}
+.smallcard-group .smallcard{
+	flex: 0 1 120px;
+	border: 1px solid #ffffffaa;
+	background: #00000077;
+	border-radius: var(--roundness);
+	padding: 16px 24px;
+}
