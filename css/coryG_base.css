@@ -8,9 +8,9 @@
 	--clr-bgglass: #efefefaa;
 	--clr-darkglass: #000000aa;
 	--clr-whiteglass: #efefefaa;
-	--clr-panelbg: #1B1F2A;
+	--clr-panelbg: #efefef;
 	--clr-alttext: #eee;
-	--clr-text: #111;
+	--clr-text: #222;
 	--clr-text-muted: #777;
 	--themeglow: 0 0 16px var(--themecolor);
 	--themeshadow: 0 0 16px rgba(0,0,0,0.7);
@@ -59,13 +59,13 @@ a{
 			text-transform: capitalize;
 		}
 		.hedtxt,.h1{
-			font-size: min(var(--size-mg),7vw);
+			font-size: min(var(--size-mg),14vw);
 		}
 		.hedtxt2,.h2{
-			font-size: var(--size-lg);
+			font-size: min(var(--size-lg),7vw);
 		}
 		.hedtxt3,.h3{
-			font-size: var(--size-md);
+			font-size: min(var(--size-md,1.75vw));
 		}
 		.hedtxt b,.h1 b,.hedtxt2 b,.hedtxt3 b,.h2 b{color: var(--themecolor);}
 
@@ -97,8 +97,8 @@ a{
 		}
 		/* styles when its not scrolled */
 		nav:not(.scrolled){
-			color: var(--clr-alttext) !important;
-			background: var(--clr-darkglass);
+			color: var(--clr-text) !important;
+			background: var(--clr-whiteglass);
 			padding: 20px 40px;
 		}
 		/* styles when its scrolled */
@@ -199,7 +199,8 @@ a{
 	.section{padding-block:5rem}
 
 	.cta-btn{
-		background: linear-gradient(80deg,var(--themecolor),var(--themecolor));
+		background: linear-gradient(80deg,var(--seccolor),var(--themecolor));
+		color: #fff;
 	}
 	.unsee{opacity: 0;}
 
@@ -284,3 +285,7 @@ a{
 		-webkit-text-stroke-color: #fbc800;
 		font-weight: 800;
 	}
+
+	.modetxt{color: var(--clr-text) !important;}
+	.modealttxt{color: var(--clr-alttext) !important;}
+	.panelbg{background-color: var(--clr-panelbg);}
