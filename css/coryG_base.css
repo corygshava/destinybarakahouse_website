@@ -36,7 +36,7 @@ html{
 	scroll-behavior: smooth;
 }
 body{
-	font-family: "Inter_24pt",system-ui,sans-serif !important;
+	/*font-family: "Inter_24pt",system-ui,sans-serif !important;*/
 	background:var(--clr-bg);
 	color:var(--clr-text);
 	line-height:1.6;
@@ -52,23 +52,20 @@ a{
 
 /* UI kit */
 	/* ---------- headings ---------- */
-		.hedtxt,.h1{
+		.hedtxt,.h1,.hedtxt2,.h2,.hedtxt3,.h3{
 			font-weight: 800;
-			font-size: min(var(--size-mg),9vw);
 			display: block;
 			width: 100%;
+			text-transform: capitalize;
+		}
+		.hedtxt,.h1{
+			font-size: min(var(--size-mg),7vw);
 		}
 		.hedtxt2,.h2{
-			font-weight: 800;
 			font-size: var(--size-lg);
-			display: block;
-			width: 100%;
 		}
 		.hedtxt3,.h3{
-			font-weight: 800;
 			font-size: var(--size-md);
-			display: block;
-			width: 100%;
 		}
 		.hedtxt b,.h1 b,.hedtxt2 b,.hedtxt3 b,.h2 b{color: var(--themecolor);}
 
@@ -205,21 +202,6 @@ a{
 		background: linear-gradient(80deg,var(--themecolor),var(--themecolor));
 	}
 	.unsee{opacity: 0;}
-
-	/* headings */
-	.hedtxt2{
-		font-weight: 800;
-		font-size: var(--size-lg);
-		display: block;
-		width: 100%;
-	}
-	.hedtxt2 b,.hedtxt3 b{color: var(--themecolor);}
-	.hedtxt3{
-		font-weight: 800;
-		font-size: var(--size-md);
-		display: block;
-		width: 100%;
-	}
 
 	.flow{
 		display: flex;
