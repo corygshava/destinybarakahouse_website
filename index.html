@@ -91,7 +91,12 @@
 					<div class="actions"></div>
 				</div>
 			</div>
+			<div class="controller">
+				<div class="slidecount"></div>
+				<div class="progress"><div class="bar" style="width:0%"></div></div>
+			</div>
 		</div>
+
 		<div class="notetxt w3-display-topleft" style="z-index: 200;">
 			<span class="themetxt">WORK IN PROGRESS</span>
 		</div>
@@ -101,7 +106,7 @@
 		let slideshowimg = undefined;
 		let imgsetup = false;
 		
-		if(!(startCountdown(launchdate).toUpperCase() == "PASSED!")){
+		if((startCountdown(launchdate).toUpperCase() == "PASSED!")){
 			actualtimer.style.display = 'none';
 			showcase.style.display = 'block';
 		} else {
@@ -111,7 +116,7 @@
 		}
 
 		function play_slide(data,linger) {
-			holder = document.querySelector('[data-role=slideshow]');
+			const holder = document.querySelector('[data-role=slideshow]');
 
 			if(holder != undefined){
 				let hed = holder.querySelector('.heading');
@@ -121,7 +126,7 @@
 				if(!imgsetup){
 					imgsetup = true;
 					slideimg.addEventListener('load',() => {
-						slideimg.animate([...entre],{...timing,duration: 500});
+						slideimg.animate([...entre],{...timing,duration: 1200});
 					})
 				}
 				// let actions = holder.querySelector('.actions');
@@ -150,19 +155,35 @@
 			}
 		}
 
+		function play_controller(id,dur) {
+			const controls = document.querySelector('.controller');
+			let prgtext = controls.querySelector('.slidecount');
+			let prgbar = controls.querySelector('.progress>.bar');
+
+			prgtext.animate(slideupAnim2,timing);
+			prgbar.animate(longen,{...timing,duration: dur});
+
+			setTimeout(() => {
+				let prg = id % sections.length;
+				prgtext.innerHTML = `${prg + 1} / <b>${sections.length}</b>`;
+			})
+		}
+
 		function runslides(){
-			let slideduration = 4000,id = 0;
-			play_slide(sections[0],slideduration);
+			let slideduration = 3000,id = 0;
+			play_slide(sections[id],slideduration);
+			play_controller(id,slideduration);
 
 			setInterval(() => {
 				id += 1;
 				play_slide(sections[id % sections.length],slideduration);
+				play_controller(id,slideduration);
 			},slideduration + timing.duration);
 		}
 
 		window.addEventListener('load',() => {
 			slideshowimg = document.querySelector('.slideimg');
-			alert_success("all elements loaded!");
+			// alert_success("all elements loaded!");
 			runslides();
 		})
 

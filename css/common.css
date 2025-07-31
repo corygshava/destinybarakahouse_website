@@ -61,6 +61,22 @@ nav .navlinks{
 		color: var(--clr-alttext);
 		padding: 24px;
 	}
+	.fullpage_slides .controller {
+		position: absolute;
+		width: min(200px,96vw);
+		top: 20vh;
+		left: 0;
+		z-index: 7;
+		opacity: 0.7;
+		background: transparent;
+		padding: 16px;
+		color: var(--clr-alttext);
+		font-size: var(--size-nm);
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-sm);
+		background: linear-gradient(105deg, #fefefe77 10%, transparent 54%);
+	}
 /* modal stuff */
 	.modal-content.md{width: min(800px, 96vw);}
 

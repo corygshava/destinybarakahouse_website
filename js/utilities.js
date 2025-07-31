@@ -45,7 +45,7 @@ let sections = [
 	},
 	{
 		title: "REACH US TODAY",
-		description: "EMAIL: destinybarakahouse@gmail.com | PHONE 1: +254748214987 | PHONE 2: +254781125979",
+		description: `<p><i class="fa fa-envelope"></i> destinybarakahouse@gmail.com </p><p><i class="fa fa-phone"></i> +254748214987 </p><p><i class="fa fa-phone"></i> +254781125979</p>`,
 		imageid:9
 	}
 ];
@@ -67,6 +67,10 @@ let slideupAnim2 = [
 let opac = [
 	{opacity: 0},
 	{opacity: 1}
+]
+let longen = [
+	{width: "0%"},
+	{width: "100%"}
 ]
 let entre = [
 	{scale:1.3,opacity: 0},
