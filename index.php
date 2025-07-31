@@ -170,7 +170,7 @@
 		}
 
 		function runslides(){
-			let slideduration = 3000,id = 0;
+			let slideduration = 11000,id = 0;
 			play_slide(sections[id],slideduration);
 			play_controller(id,slideduration);
 
