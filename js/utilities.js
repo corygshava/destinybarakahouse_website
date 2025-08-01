@@ -45,7 +45,10 @@ let sections = [
 	},
 	{
 		title: "REACH US TODAY",
-		description: `<p><i class="fa fa-envelope"></i> destinybarakahouse@gmail.com </p><p><i class="fa fa-phone"></i> +254748214987 </p><p><i class="fa fa-phone"></i> +254781125979</p>`,
+		description: `
+			<p><i class="fa fa-envelope"></i> destinybarakahouse@gmail.com </p>
+			<p><i class="fa fa-phone"></i> +254 748 214 987 </p>
+			<p><i class="fa fa-phone"></i> +254 781 125 979</p>`,
 		imageid:9
 	}
 ];
